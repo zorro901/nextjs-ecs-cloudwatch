@@ -1,0 +1,30 @@
+{
+  "family": "nextjs-frontend-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::300602618756:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "nextjs-frontend",
+      "image": "300602618756.dkr.ecr.ap-northeast-1.amazonaws.com/nextjs-frontend:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/nextjs-frontend",
+          "awslogs-region": "ap-northeast-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

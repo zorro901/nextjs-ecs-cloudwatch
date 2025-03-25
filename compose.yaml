@@ -1,0 +1,11 @@
+name: nextjs-ecs-cloudwatch
+services:
+  nextjs-ecs-cloudwatch:
+    container_name: nextjs-ecs-cloudwatch
+    build: .
+    image: 300602618756.dkr.ecr.ap-northeast-1.amazonaws.com/nextjs-ecs-cloudwatch:0.0.1
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0

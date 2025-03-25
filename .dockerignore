@@ -1,0 +1,39 @@
+# Node
+node_modules
+
+# ビルド成果物
+.next
+out
+dist
+build
+*.tsbuildinfo
+
+# テスト関連
+test-results
+tests
+playwright-report
+*.spec.*
+*.test.*
+vitest.config.mts
+vitest.setup.ts
+playwright.config.ts
+playwright-ct.config.mts
+
+# 開発ツール設定
+.eslintrc*
+eslint.config.mjs
+.prettierrc*
+bunfig.toml
+lefthook.yml
+orval.config.ts
+
+# その他
+.DS_Store
+.env*
+!.env.production
+*.log
+README.md
+.git
+.github
+.vscode
+.idea
